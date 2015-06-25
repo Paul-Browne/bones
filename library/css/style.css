@@ -1,15 +1,19 @@
 @-ms-viewport{width:device-width}
 
+/* ==== */
 /* fouc */
 /* ==== */
+
 #loader{background:#fff;position:fixed;width:100%;height:100%;z-index:999}
 #loader.loaded{-webkit-animation:fouc .5s .5s;animation:fouc .5s .5s;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards}
 #byebye{-webkit-animation:fouc .5s;animation:fouc .5s;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards}
 @-webkit-keyframes fouc{from{opacity:1}to{opacity:0}}
 @keyframes fouc{from{opacity:1}to{opacity:0}}
 
+/* ====== */
 /* resets */
 /* ====== */
+
 body,fieldset,figure,form{margin:0}
 fieldset,img,legend{border:0}
 pre,textarea{overflow:auto}
@@ -65,8 +69,10 @@ ol ol ol{list-style-type:lower-roman}
 th::-moz-selection,th::selection{background:0 0;color:inherit}
 p{-ms-word-break:break-all;-ms-word-wrap:break-all;word-break:break-word;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;-webkit-hyphenate-before:2;-webkit-hyphenate-after:3;hyphenate-lines:3}
 
+/* ============== */
 /* helper classes */
 /* ============== */
+
 .clearfix:after,.clearfix:before{display:table;content:" "}
 .clearfix:after{clear:both}
 dl.inline dd{margin-left:0}
@@ -87,8 +93,10 @@ img.valign{margin-bottom:.4em;margin-top:.4em}
 .middlize{margin:0 auto}
 .icovr>img{position:absolute;max-width:99999px}
 
+/* =============== */
 /* base typography */
 /* =============== */
+
 body{font-size:16px;line-height:1.4;color:#4d4d4d;font-family:'Open Sans',Helvetica,Arial;font-weight:400}
 address,blockquote,dl,figure,h1,h2,h3,h4,h5,h6,menu,ol,p,pre,table,table caption,ul{margin:0 0 1em;font-weight:inherit}
 a,a:visited{text-decoration:none;color:#37F}
@@ -105,15 +113,85 @@ p a,p a:visited{outline:0;border-bottom:1px solid transparent}
 .h5,h5{font-size:.784em;text-transform:uppercase;letter-spacing:1.5px}
 .h6,h6{font-size:.615em}
 blockquote{font-size:1.2em;margin-left:0}
-blockquote:before{float:left;content:'\f10e';font-family:'FontAwesome';font-style:normal;font-size:2.8em;line-height:1.15em;margin:0 0.15em -0.3em 0;opacity:.35}
+blockquote:before{float:left;content:'\e811';font-family:'iconfont';font-style:normal;font-size:3.5em;line-height:1em;margin:-0.05em 0.15em -0.3em 0;opacity:.35;padding:1px}
 blockquote .source{font-family:'Open Sans',helvetica,sans;font-style:normal}
 blockquote .source:before{content:'\2015\2015\00a0\00a0';opacity:.35}
-span.initial{float:left;margin-right:.1em;font-size:3.2em;margin-bottom:-.15em}
+span.initial{float:left;font-size:3.2em;margin:-0.05em 0.15em -0.3em 0;line-height:1em;text-transform:uppercase}
+
+/* ======== */
+/* iconfont */
+/* ======== */
+
+@font-face {
+  font-family: 'iconfont';
+  src: url('../fonts/iconfont.eot?70947239');
+  src: url('../fonts/iconfont.eot?70947239#iefix') format('embedded-opentype'),
+       url('../fonts/iconfont.woff?70947239') format('woff'),
+       url('../fonts/iconfont.ttf?70947239') format('truetype'),
+       url('../fonts/iconfont.svg?70947239#iconfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "iconfont";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+   font-size: 120%; 
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+.icon-twitter:before { content: '\e800'; }
+.icon-facebook:before { content: '\e801'; }
+.icon-comment:before { content: '\e802'; }
+.icon-calendar:before { content: '\e803'; }
+.icon-bookmark:before { content: '\e804'; }
+.icon-pencil:before { content: '\e805'; }
+.icon-heart:before { content: '\e806'; }
+.icon-warning:before { content: '\e807'; }
+.icon-circle-thin:before { content: '\e808'; }
+.icon-github:before { content: '\e809'; }
+.icon-gplus:before { content: '\e80a'; }
+.icon-linkedin:before { content: '\e80b'; }
+.icon-behance:before { content: '\e80c'; }
+.icon-mail:before { content: '\e80d'; }
+.icon-dribbble:before { content: '\e80e'; }
+.icon-phone:before { content: '\e80f'; }
+.icon-user:before { content: '\e810'; }
+.icon-quote:before { content: '\e811'; }
+.icon-info:before { content: '\e812'; }
+.icon-cancel:before { content: '\e813'; }
+.icons a:hover{border-bottom:0;}
+
+/* ============= */
 /* custom styles */
 /* ============= */
 
+/* add your styles here, or in /css/styles2 */
 
-
+/* ===== */
 /* print */
 /* ===== */
+
 @media print{blockquote,img,pre,tr{page-break-inside:avoid}*,*:after,*:before{background:0 0!important;color:#000!important;box-shadow:none!important;text-shadow:none!important}a,a:visited{text-decoration:underline}a[href]:after{content:" (" attr(href)")"}abbr[title]:after{content:" (" attr(title)")"}a[href^="#"]:after,a[href^="javascript:"]:after{content:""}blockquote,pre{border:1px solid #999}thead{display:table-header-group}img{max-width:100%!important}h2,h3,p{orphans:3;widows:3}h2,h3{page-break-after:avoid}}
