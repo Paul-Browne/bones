@@ -42,6 +42,9 @@ function bones_ahoy() {
   add_action( 'wp_head', 'bones_remove_recent_comments_style', 1 );
   // clean up gallery output in wp
   add_filter( 'gallery_style', 'bones_gallery_style' );
+  // stop wordpress adding paragraphs and line breaks
+  remove_filter( 'the_content', 'wpautop' );
+  remove_filter( 'the_excerpt', 'wpautop' );
 
   // enqueue base scripts and styles
   add_action( 'wp_enqueue_scripts', 'bones_scripts_and_styles', 999 );
