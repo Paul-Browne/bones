@@ -7,6 +7,7 @@
 * removed sass stuff
 * removed conditional html from header.php
 * removed Lato fonts from functions.php
+* added html5shim to header.php
 * added remove_filter for wpautop from functions.php
 * added google fonts (Open Sans and Libre Baskerville) to bones.php
 * added iconfont to library/fonts/iconfont
