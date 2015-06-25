@@ -8,7 +8,7 @@
 ); ?>
 </p>
 </header>
-<section class="entry-content cf" itemprop="articleBody">
+<section class="entry-content" itemprop="articleBody">
 <?php
 the_content();
 wp_link_pages( array(
