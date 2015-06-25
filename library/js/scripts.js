@@ -5,3 +5,5 @@ $('.comment img[data-gravatar]').each(function(){
 });
 
 });
+
+Curator();
