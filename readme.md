@@ -14,3 +14,9 @@
 * added favicon etc. stuff to header.php and library/icons/
 * added site wide SEO to header.php
 * added compiled.js to header.php and library/js/
+* changed styles in styles.css
+
+
+#####todo
+* change gridsystem classes
+* add fontface markup to styles.css
