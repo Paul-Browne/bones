@@ -18,5 +18,7 @@
 
 
 #####todo
-* change gridsystem classes
-* add fontface markup to styles.css
+* add epicgrid classes
+* add more icons to fontface
+* add form and button styles with icons for submit and search
+* generally make better
