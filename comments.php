@@ -2,8 +2,7 @@
 <?php if ( have_comments() ) : ?>
 <h3 id="comments-title"><?php comments_number( __( '<span>No</span> Comments', 'bonestheme' ), __( '<span>One</span> Comment', 'bonestheme' ), __( '<span>%</span> Comments', 'bonestheme' ) );?></h3>
 <section class="commentlist">
-<?php
-wp_list_comments( array(
+<?php wp_list_comments( array(
 'style'             => 'div',
 'short_ping'        => true,
 'avatar_size'       => 40,
@@ -14,8 +13,7 @@ wp_list_comments( array(
 'per_page'          => '',
 'reverse_top_level' => null,
 'reverse_children'  => ''
-) );
-?>
+));?>
 </section>
 <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 <nav class="navigation comment-navigation" role="navigation">
