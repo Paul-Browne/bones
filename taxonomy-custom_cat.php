@@ -20,7 +20,7 @@
 <?php endwhile; ?>
 <?php bones_page_navi(); ?>
 <?php else : ?>
-<article id="post-not-found" class="hentry cf">
+<article id="post-not-found" class="hentry">
 <header class="article-header">
 <h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
 </header>
