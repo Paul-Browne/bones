@@ -13,7 +13,7 @@
 'per_page'          => '',
 'reverse_top_level' => null,
 'reverse_children'  => ''
-));?>
+)); ?>
 </section>
 <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 <nav class="navigation comment-navigation" role="navigation">
