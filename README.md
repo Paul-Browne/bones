@@ -21,4 +21,5 @@
 * add epicgrid classes
 * add more icons to fontface
 * add form and button styles with icons for submit and search
-* generally make better
+* generally improve look and feel
+* beautify html
