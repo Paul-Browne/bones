@@ -35,6 +35,7 @@
     		<meta property="og:site_name" content="yoursite.com">
 		
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+		<!--[if lt IE 9]><script src="https://cdn.rawgit.com/aFarkas/html5shiv/master/dist/html5shiv.min.js"></script><![endif]-->
 		<script>!function(){if("-ms-user-select"in document.documentElement.style&&navigator.userAgent.match(/IEMobile\/10\.0/)){var a=document.createElement("style");a.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}")),document.getElementsByTagName("head")[0].appendChild(a)}}();</script>
 		<?php wp_head(); ?>
 		
