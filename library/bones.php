@@ -112,6 +112,18 @@ function bones_gallery_style($css) {
 	return preg_replace( "!<style type='text/css'>(.*?)</style>!s", '', $css );
 }
 
+// remove emoji shite
+function disable_wp_emojicons() {
+  remove_action( 'admin_print_styles', 'print_emoji_styles' );
+  remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+  remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+  remove_action( 'wp_print_styles', 'print_emoji_styles' );
+  remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+  remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+  remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+}
+add_action( 'init', 'disable_wp_emojicons' );
+
 
 /*********************
 SCRIPTS & ENQUEUEING
@@ -120,10 +132,14 @@ SCRIPTS & ENQUEUEING
 // loading jquery etc
 function bones_scripts_and_styles() {
 
-  global $wp_styles; // call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
-
   if (!is_admin()) {
 
+	    // remove local jquery
+	    wp_deregister_script( 'jquery' );
+    
+		// adding CDN jquery
+		wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', array(), '', false );
+    
 		// adding compiled.js scripts
 		wp_register_script( 'compiled', get_stylesheet_directory_uri() . '/library/js/compiled.js', array(), '', false );
 
@@ -131,7 +147,7 @@ function bones_scripts_and_styles() {
 		wp_register_script( 'init-scripts', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
 		
 		// google fonts - open sans and libre baskerville
-		wp_register_style ('fonts', '//fonts.googleapis.com/css?family=Open+Sans:300,400,600|Libre+Baskerville:400italic', array(), '', all);
+		wp_register_style ('fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Libre+Baskerville:400italic', array(), '', all);
 
 		// register main stylesheet
 		wp_register_style( 'stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), '', 'all' );
@@ -144,6 +160,7 @@ function bones_scripts_and_styles() {
 			wp_enqueue_script( 'comment-reply' );
 		}
 		
+    
 		wp_enqueue_style( 'stylesheet' );
 		wp_enqueue_style( 'stylesheet2' );
 		wp_enqueue_style( 'fonts' );
