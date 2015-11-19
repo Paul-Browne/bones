@@ -7,6 +7,9 @@
 * removed sass stuff
 * removed conditional html from header.php
 * removed Lato fonts from functions.php
+* removed emoji fallback stuff
+* removed local jquery and jquery migrate version
+* added jquery from google cdn (no jquery migrate)
 * added html5shim to header.php
 * added remove_filter for wpautop from functions.php
 * added google fonts (Open Sans and Libre Baskerville) to bones.php
@@ -16,10 +19,7 @@
 * added compiled.js to header.php and library/js/
 * changed styles in styles.css
 
-
 #####todo
-* add epicgrid classes
-* add more icons to fontface
-* add form and button styles with icons for submit and search
+* add colym classes
 * generally improve look and feel (ie remove posted and by use icons instead)
-* beautify html
+
